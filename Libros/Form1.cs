@@ -1,4 +1,6 @@
 ﻿using Libros.Entidades;
+using Libros.UI.Consulta;
+using Libros.UI.Registro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,17 @@ namespace Libros
             InitializeComponent();
         }
 
+        private void librosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroLibros L = new RegistroLibros();
+            L.Show();
+        }
 
+        private void librosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaLibros c = new ConsultaLibros();
+            c.Show();
+            
+        }
     }
 }

@@ -31,8 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.colsultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colsultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.librosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,13 @@
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.registroToolStripMenuItem.Text = "Registro";
             // 
+            // librosToolStripMenuItem
+            // 
+            this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
+            this.librosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.librosToolStripMenuItem.Text = "Libros";
+            this.librosToolStripMenuItem.Click += new System.EventHandler(this.librosToolStripMenuItem_Click);
+            // 
             // colsultaToolStripMenuItem
             // 
             this.colsultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -71,17 +78,12 @@
             this.colsultaToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.colsultaToolStripMenuItem.Text = "Colsulta";
             // 
-            // librosToolStripMenuItem
-            // 
-            this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
-            this.librosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.librosToolStripMenuItem.Text = "Libros";
-            // 
             // librosToolStripMenuItem1
             // 
             this.librosToolStripMenuItem1.Name = "librosToolStripMenuItem1";
             this.librosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.librosToolStripMenuItem1.Text = "Libros";
+            this.librosToolStripMenuItem1.Click += new System.EventHandler(this.librosToolStripMenuItem1_Click);
             // 
             // Form1
             // 
