@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
             this.TipotextBox = new System.Windows.Forms.TextBox();
             this.SiglastextBox = new System.Windows.Forms.TextBox();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
@@ -42,14 +38,89 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LibroIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
+            // TipotextBox
+            // 
+            this.TipotextBox.Location = new System.Drawing.Point(102, 265);
+            this.TipotextBox.Name = "TipotextBox";
+            this.TipotextBox.Size = new System.Drawing.Size(148, 20);
+            this.TipotextBox.TabIndex = 20;
+            // 
+            // SiglastextBox
+            // 
+            this.SiglastextBox.Location = new System.Drawing.Point(102, 230);
+            this.SiglastextBox.Name = "SiglastextBox";
+            this.SiglastextBox.Size = new System.Drawing.Size(148, 20);
+            this.SiglastextBox.TabIndex = 19;
+            // 
+            // DescripciontextBox
+            // 
+            this.DescripciontextBox.Location = new System.Drawing.Point(118, 133);
+            this.DescripciontextBox.Multiline = true;
+            this.DescripciontextBox.Name = "DescripciontextBox";
+            this.DescripciontextBox.Size = new System.Drawing.Size(132, 66);
+            this.DescripciontextBox.TabIndex = 18;
+            // 
+            // LibroIDnumericUpDown
+            // 
+            this.LibroIDnumericUpDown.Location = new System.Drawing.Point(82, 37);
+            this.LibroIDnumericUpDown.Name = "LibroIDnumericUpDown";
+            this.LibroIDnumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.LibroIDnumericUpDown.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 265);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Tipo";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(38, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Siglas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 136);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Descripcion";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "LibroID";
+            // 
+            // ValidarerrorProvider
+            // 
+            this.ValidarerrorProvider.ContainerControl = this;
+            // 
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::Libros.Properties.Resources.new_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(23, 283);
+            this.Nuevobutton.Location = new System.Drawing.Point(23, 324);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(77, 48);
             this.Nuevobutton.TabIndex = 23;
@@ -73,7 +144,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Image = global::Libros.Properties.Resources.borrar_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(213, 283);
+            this.Eliminarbutton.Location = new System.Drawing.Point(213, 324);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(77, 48);
             this.Eliminarbutton.TabIndex = 24;
@@ -85,7 +156,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::Libros.Properties.Resources.save_32;
-            this.Guardarbutton.Location = new System.Drawing.Point(118, 283);
+            this.Guardarbutton.Location = new System.Drawing.Point(118, 324);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(77, 48);
             this.Guardarbutton.TabIndex = 22;
@@ -94,80 +165,29 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // TipotextBox
+            // dateTimePicker1
             // 
-            this.TipotextBox.Location = new System.Drawing.Point(102, 216);
-            this.TipotextBox.Name = "TipotextBox";
-            this.TipotextBox.Size = new System.Drawing.Size(148, 20);
-            this.TipotextBox.TabIndex = 20;
+            this.dateTimePicker1.Location = new System.Drawing.Point(102, 83);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 25;
             // 
-            // SiglastextBox
+            // label3
             // 
-            this.SiglastextBox.Location = new System.Drawing.Point(102, 181);
-            this.SiglastextBox.Name = "SiglastextBox";
-            this.SiglastextBox.Size = new System.Drawing.Size(148, 20);
-            this.SiglastextBox.TabIndex = 19;
-            // 
-            // DescripciontextBox
-            // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(118, 84);
-            this.DescripciontextBox.Multiline = true;
-            this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(132, 66);
-            this.DescripciontextBox.TabIndex = 18;
-            // 
-            // LibroIDnumericUpDown
-            // 
-            this.LibroIDnumericUpDown.Location = new System.Drawing.Point(82, 37);
-            this.LibroIDnumericUpDown.Name = "LibroIDnumericUpDown";
-            this.LibroIDnumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.LibroIDnumericUpDown.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Tipo";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 181);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Siglas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Descripcion";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "LibroID";
-            // 
-            // ValidarerrorProvider
-            // 
-            this.ValidarerrorProvider.ContainerControl = this;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Fecha";
             // 
             // RegistroLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
@@ -204,5 +224,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

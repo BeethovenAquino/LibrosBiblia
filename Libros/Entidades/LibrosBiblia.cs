@@ -10,6 +10,7 @@ namespace Libros.Entidades
     {
         [Key]
         public int LibroId { get; set; }
+        public DateTime Fecha { get; set; }
         public string Descripcion { get; set; }
         public string Siglas { get; set; }
         public string Tipo { get; set; }
