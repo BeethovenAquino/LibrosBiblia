@@ -50,6 +50,7 @@ namespace Libros.UI.Registro
             LibrosBiblia Libros = new LibrosBiblia();
 
             Libros.LibroId = Convert.ToInt32(LibroIDnumericUpDown.Value);
+            Libros.Fecha = FechadateTimePicker.Value;
             Libros.Descripcion = DescripciontextBox.Text;
             Libros.Siglas = SiglastextBox.Text;
             Libros.Tipo = TipotextBox.Text;
@@ -62,6 +63,7 @@ namespace Libros.UI.Registro
         {
             LibroIDnumericUpDown.Value = 0;
             DescripciontextBox.Clear();
+            FechadateTimePicker.Value = DateTime.Now;
             SiglastextBox.Clear();
             TipotextBox.Clear();
             ValidarerrorProvider.Clear();
@@ -69,6 +71,9 @@ namespace Libros.UI.Registro
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+            LibrosBiblia Libros = LlenaClase();
+
+            bool paso = false;
             if (Validar(2))
             {
                 MessageBox.Show("Llenar campos", "Llene los campos",
@@ -76,9 +81,7 @@ namespace Libros.UI.Registro
             }
             else
             {
-                LibrosBiblia Libros = LlenaClase();
 
-                bool paso = false;
 
                 int id = Convert.ToInt32(LibroIDnumericUpDown.Value);
                 if (id == 0)
@@ -93,27 +96,29 @@ namespace Libros.UI.Registro
                     {
                         paso = BLL.LibrosBLL.Modificar(Libros);
                     }
-
-                    if (paso)
-                    {
-                        MessageBox.Show("Guardado!!", "Se Guardo Correctamente",
-                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        LibroIDnumericUpDown.Value = 0;
-                        DescripciontextBox.Clear();
-                        SiglastextBox.Clear();
-                        TipotextBox.Clear();
-                        ValidarerrorProvider.Clear();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se guardo!!", "Intente Guardar de nuevo",
-                          MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
                 }
+
+                if (paso)
+                {
+                    MessageBox.Show("Guardado!!", "Se Guardo Correctamente",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LibroIDnumericUpDown.Value = 0;
+                    DescripciontextBox.Clear();
+                    FechadateTimePicker.Value = DateTime.Now;
+                    SiglastextBox.Clear();
+                    TipotextBox.Clear();
+                    ValidarerrorProvider.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("No se guardo!!", "Intente Guardar de nuevo",
+                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
         }
+    
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
@@ -132,6 +137,7 @@ namespace Libros.UI.Registro
                     MessageBox.Show("Eliminado", "Bien hecho", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LibroIDnumericUpDown.Value = 0;
                     DescripciontextBox.Clear();
+                    FechadateTimePicker.Value = DateTime.Now;
                     SiglastextBox.Clear();
                     TipotextBox.Clear();
                     ValidarerrorProvider.Clear();
@@ -155,6 +161,7 @@ namespace Libros.UI.Registro
             {
                 LibroIDnumericUpDown.Value = Libros.LibroId;
                 DescripciontextBox.Text = Libros.Descripcion;
+                FechadateTimePicker.Value = Libros.Fecha;
                 SiglastextBox.Text = Libros.Siglas;
                 TipotextBox.Text = Libros.Tipo;
             }

@@ -42,7 +42,7 @@
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LibroIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
@@ -165,12 +165,12 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // dateTimePicker1
+            // FechadateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(102, 83);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 25;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(102, 83);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.FechadateTimePicker.TabIndex = 25;
             // 
             // label3
             // 
@@ -187,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
@@ -225,6 +225,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
     }
 }

@@ -19,6 +19,7 @@ namespace Libros.Entidades
         public LibrosBiblia()
         {
             LibroId = 0;
+            Fecha = DateTime.Now;
             Descripcion = string.Empty;
             Siglas = string.Empty;
             Tipo = string.Empty;
