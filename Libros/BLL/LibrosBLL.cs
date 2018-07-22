@@ -116,5 +116,12 @@ namespace Libros.BLL
             }
             return Libros;
         }
+
+        public static string BuscarDescripcion(string descripcion)
+        {
+            LibrosBiblia libros = new LibrosBiblia();
+            libros.Descripcion = descripcion;
+            return descripcion;
+        }
     }
 }

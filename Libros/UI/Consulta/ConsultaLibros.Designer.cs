@@ -65,6 +65,7 @@
             this.CriteriotextBox.Name = "CriteriotextBox";
             this.CriteriotextBox.Size = new System.Drawing.Size(168, 20);
             this.CriteriotextBox.TabIndex = 16;
+            
             // 
             // label2
             // 
